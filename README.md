@@ -1,41 +1,41 @@
-# Домашнее задание к работе 12
+# Домашнее задание к работе 9
 ## Условие задачи
-Напишите программу, которая вычисляет размер основных типов данных в байтах :
-char
+Напишите программу, которая вывыводит заполненный квадрат
 ### Алгоритм
 1.Начало программы 
 2.Объявить массив
-char arr[105025] — массив из двух элементов типа double 
-3.Вычислить размер типа double
-size = (char*)(&arr[105025]) - (char*)(&arr[0])  - разница между адресами двух соседних элементов = размер типа char 
+- a = переменная.
+- stolbic = переменная.
+- stroka = переменная.
+- s = переменная.
+3.Вычислить
+  for (stolbic = 0; stolbic < a; stolbic++) {
+              for (stroka = 0; stroka < a; stroka++)
 4.Вывести результат
-Конец программы
+   printf("%c", s);
+              printf("\n");
+5.Конец 
 ### Блок-схема
 
-![Блок схема алгоритма](labaa12.drawio.png)
+![Блок схема алгоритма](lab9.drawio.png)
 
 ## 2. Реализация программы:
-   
-      #define _CRT_SECURE_NO_WARNINGS
-      #define _USE_MATH_DEFINES
-      #include <locale.h>
-      #include <stdio.h>
-      #include <stdlib.h>
-      #include <conio.h>
-      #include <math.h>
+       #define _CRT_SECURE_NO_WARNINGS 
+      #define _USE_MATH_DEFINES 
+      #include <locale.h> 
+      #include <stdio.h> 
       
       int main() {
           setlocale(LC_ALL, "RUS");
-          char arr[2];
-          long size = (char*)(&arr[1]) - (char*)(&arr[0]);
-          printf("Разница: %ld\n", size);
-          if (size == sizeof(char)) {
-              printf("\n Результаты совпадают\n");
+          int a, stolbic, stroka;
+          char s;
+          printf("a s:\n");
+          scanf("%d %c", &a, &s);
+          for (stolbic = 0; stolbic < a; stolbic++) {
+              for (stroka = 0; stroka < a; stroka++)
+                  printf("%c", s);
+              printf("\n");
           }
-          else {
-              printf("\n Результаты не совпадают\n");
-          }
-          return 0;
       }
 ## 3. Результат работы программы
 ![Результат работы программы](image.png)
